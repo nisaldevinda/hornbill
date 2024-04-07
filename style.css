@@ -66,13 +66,14 @@
   /**
   @color declaration
   */
-  --mt-bule: #0a377f;
-  --mt-text-light-white: #fcf7e9;
-  --mt-text-dark-white: #b7cae7;
-  --mt-bg-light-white: #fcf7e9;
-  --mt-bg-dark-white: #f3efe1;
-  --mt-brown: #9e6b58;
-  --mt-text-color: #0a377f;
+  --mt-bule: #7e9a33;
+  --mt-text-light-white: #202020;
+  --mt-text-dark-white: #202020;
+  --mt-bg-light-white: #e3efc7;
+  --mt-bg-dark-white: #fdf9ef;
+  --mt-brown: #d4af37;
+  --mt-brown-h: #e6c559;
+  --mt-text-color: #202020;
   /**
   @font weight declaration
   */
@@ -244,7 +245,7 @@ input {
   outline: none;
 }
 
-input[type=color] {
+input[type="color"] {
   appearance: none;
   -moz-appearance: none;
   -webkit-appearance: none;
@@ -367,7 +368,7 @@ input[type=color] {
   left: 0;
   right: 0;
   bottom: 0;
-  background: #995d47;
+  background: var(--mt-brown-h);
   transform: scaleX(0);
   transform-origin: 0 50%;
   transition-property: transform;
@@ -486,12 +487,18 @@ input[type=color] {
 /*  06. PAGE TITLE CSS START
 /*----------------------------------------*/
 .page-title-area {
-  background: url(/assets/img/footer/page-title-img.png) top right/cover no-repeat;
+  background: url(/assets/img/footer/page-title-img.png) top right/cover
+    no-repeat;
   background-color: rgba(0, 0, 0, 0);
   background-color: var(--mt-bule);
 }
 .page-title-area .section-overlay {
-  background: linear-gradient(127deg, rgb(10, 55, 127) 0%, rgb(10, 55, 127) 50%, rgba(10, 55, 127, 0.7763480392) 100%);
+  background: linear-gradient(
+    127deg,
+    rgb(94, 128, 0) 0%,
+    rgb(94, 128, 0) 50%,
+    rgba(94, 128, 0, 0.7763480392) 100%
+  );
 }
 
 .page-title-wrappper {
@@ -520,7 +527,9 @@ input[type=color] {
   left: -20px;
   top: 2px;
 }
-.page-title-wrappper ul.breadcrumb-menu li.breadcrumb-menu-item:first-child::before {
+.page-title-wrappper
+  ul.breadcrumb-menu
+  li.breadcrumb-menu-item:first-child::before {
   display: none;
 }
 
@@ -585,7 +594,9 @@ input[type=color] {
   padding: 15px 0;
 }
 
-@media only screen and (min-width: 768px) and (max-width: 991px), only screen and (min-width: 576px) and (max-width: 767px), (max-width: 575px) {
+@media only screen and (min-width: 768px) and (max-width: 991px),
+  only screen and (min-width: 576px) and (max-width: 767px),
+  (max-width: 575px) {
   .header__sticky.header__bottom-2 {
     padding: 30px 0;
   }
@@ -1143,7 +1154,13 @@ input[type=color] {
   float: left;
   margin-left: 1.5px;
 }
-.hero-content .hero-site-info .hero-single-site-info .site-reting ul.reting li i {
+.hero-content
+  .hero-site-info
+  .hero-single-site-info
+  .site-reting
+  ul.reting
+  li
+  i {
   font-size: 18px;
   color: var(--mt-text-light-white);
 }
@@ -1172,7 +1189,7 @@ ul.hero-site-info li.site-info2 .site-rating-img img {
 .hero-single-feature {
   display: flex;
   padding: 44px 40px;
-  background: #0d45a0;
+  background: #d4af37;
 }
 .hero-single-feature .hero-sf-content h4 {
   color: var(--mt-text-light-white);
@@ -1377,11 +1394,16 @@ ul.hero-site-info li.site-info2 .site-rating-img img {
 /*----------------------------------------*/
 .history-section {
   background: url(/assets/img/history/history-bg.png) top left/cover no-repeat;
-  background-color: #0a377f;
+  background-color: #5e8000;
 }
 .history-section .section-overlay {
-  background: rgb(10, 55, 127);
-  background: linear-gradient(127deg, rgba(10, 55, 127, 0.7763480392) 9%, rgb(10, 55, 127) 32%, rgb(10, 55, 127) 100%);
+  background: rgb(94, 128, 0);
+  background: linear-gradient(
+    127deg,
+    rgba(94, 128, 0, 0.7763480392) 9%,
+    rgb(94, 128, 0) 32%,
+    rgb(94, 128, 0) 100%
+  );
 }
 
 .history-tab {
@@ -1526,7 +1548,7 @@ ul.hero-site-info li.site-info2 .site-rating-img img {
 }
 .single-attorney .attorney-info h4.heading-style2 a {
   -webkit-text-decoration: 0;
-          text-decoration: 0;
+  text-decoration: 0;
 }
 .single-attorney .attorney-info span.attorney-title {
   color: var(--mt-brown);
@@ -1761,7 +1783,12 @@ footer.footer {
   background-color: var(--mt-bule);
 }
 footer.footer .section-overlay {
-  background: linear-gradient(127deg, rgb(10, 55, 127) 0%, rgb(10, 55, 127) 60%, rgba(10, 55, 127, 0.7763480392) 100%);
+  background: linear-gradient(
+    127deg,
+    rgb(126, 154, 51) 0%,
+    rgb(126, 154, 51) 60%,
+    rgba(124, 154, 51, 0.7763480392) 100%
+  );
 }
 
 .newsletter h3 {
@@ -2008,7 +2035,11 @@ footer.footer .section-overlay {
   background: inherit;
   border: none;
 }
-.faq-accordion .accordion .accordion-item h2.accordion-header button.accordion-button {
+.faq-accordion
+  .accordion
+  .accordion-item
+  h2.accordion-header
+  button.accordion-button {
   background: inherit;
   font-family: var(--mt-ff-manrope);
   font-weight: var(--mt-fw-sbold);
@@ -2019,7 +2050,11 @@ footer.footer .section-overlay {
   padding-left: 0;
   padding-right: 0;
 }
-.faq-accordion .accordion .accordion-item h2.accordion-header button.accordion-button:after {
+.faq-accordion
+  .accordion
+  .accordion-item
+  h2.accordion-header
+  button.accordion-button:after {
   background: inherit;
   position: absolute;
   content: "\f107";
@@ -2029,16 +2064,29 @@ footer.footer .section-overlay {
   top: 22%;
   font-size: 20px;
 }
-.faq-accordion .accordion .accordion-item h2.accordion-header button.accordion-button:focus {
+.faq-accordion
+  .accordion
+  .accordion-item
+  h2.accordion-header
+  button.accordion-button:focus {
   box-shadow: none;
 }
-.faq-accordion .accordion .accordion-item h2.accordion-header button.accordion-button span {
+.faq-accordion
+  .accordion
+  .accordion-item
+  h2.accordion-header
+  button.accordion-button
+  span {
   font-family: var(--mt-ff-md-serif);
   font-weight: var(--mt-fw-regular);
   color: var(--mt-brown);
   margin-right: 14px;
 }
-.faq-accordion .accordion .accordion-item h2.accordion-header button.accordion-button.collapsed:after {
+.faq-accordion
+  .accordion
+  .accordion-item
+  h2.accordion-header
+  button.accordion-button.collapsed:after {
   transform: rotateX(360deg);
 }
 .faq-accordion .accordion .accordion-item .accordion-collapse .accordion-body {
@@ -2177,8 +2225,13 @@ footer.footer .section-overlay {
 .case-support-info .support-info-overlay {
   padding: 60px 40px;
   color: var(--mt-text-light-white);
-  background: rgb(10, 55, 127);
-  background: linear-gradient(127deg, rgb(10, 55, 127) 0%, rgb(10, 55, 127) 60%, rgba(10, 55, 127, 0.7763480392) 100%);
+  background: rgb(94, 128, 0);
+  background: linear-gradient(
+    127deg,
+    rgb(94, 128, 0) 0%,
+    rgb(94, 128, 0) 60%,
+    rgba(94, 128, 0, 0.7763480392) 100%
+  );
 }
 .case-support-info .support-info-overlay .support-icon i {
   font-size: 48px;
@@ -2339,15 +2392,28 @@ footer.footer .section-overlay {
   border: 1px solid rgba(123, 119, 114, 0.2);
   border-radius: 5px;
 }
-.blog-sidebar-widget .blog-sidebar-wrapper-content .blog-sidebar-search form button {
+.blog-sidebar-widget
+  .blog-sidebar-wrapper-content
+  .blog-sidebar-search
+  form
+  button {
   position: absolute;
   right: 24px;
 }
-.blog-sidebar-widget .blog-sidebar-wrapper-content .blog-sidebar-search form button i {
+.blog-sidebar-widget
+  .blog-sidebar-wrapper-content
+  .blog-sidebar-search
+  form
+  button
+  i {
   color: var(--mt-brown);
   font-weight: 400;
 }
-.blog-sidebar-widget .blog-sidebar-wrapper-content .blog-sidebar-search form input {
+.blog-sidebar-widget
+  .blog-sidebar-wrapper-content
+  .blog-sidebar-search
+  form
+  input {
   width: 100%;
   background: inherit;
   border: none;
@@ -2362,25 +2428,45 @@ footer.footer .section-overlay {
 .blog-sidebar-widget .blog-sidebar-wrapper-content .blog-category ul li a span {
   color: var(--mt-brown);
 }
-.blog-sidebar-widget .blog-sidebar-wrapper-content .blog-category ul li:last-child {
+.blog-sidebar-widget
+  .blog-sidebar-wrapper-content
+  .blog-category
+  ul
+  li:last-child {
   margin-bottom: 0;
 }
 .blog-sidebar-widget .blog-sidebar-wrapper-content .rc-post-wrapper .blog-item {
   margin-bottom: 0;
 }
-.blog-sidebar-widget .blog-sidebar-wrapper-content .rc-post-wrapper .blog-content {
+.blog-sidebar-widget
+  .blog-sidebar-wrapper-content
+  .rc-post-wrapper
+  .blog-content {
   margin-top: 0;
 }
-.blog-sidebar-widget .blog-sidebar-wrapper-content .rc-post-wrapper .rc-post .blog-date span {
+.blog-sidebar-widget
+  .blog-sidebar-wrapper-content
+  .rc-post-wrapper
+  .rc-post
+  .blog-date
+  span {
   font-size: 14px;
   line-height: 26px;
 }
-.blog-sidebar-widget .blog-sidebar-wrapper-content .rc-post-wrapper .rc-post h4.blog-sm-title {
+.blog-sidebar-widget
+  .blog-sidebar-wrapper-content
+  .rc-post-wrapper
+  .rc-post
+  h4.blog-sm-title {
   font-size: 16px;
   line-height: 24px;
   margin-top: 4px;
 }
-.blog-sidebar-widget .blog-sidebar-wrapper-content .rc-post-wrapper .rc-post hr {
+.blog-sidebar-widget
+  .blog-sidebar-wrapper-content
+  .rc-post-wrapper
+  .rc-post
+  hr {
   color: rgba(123, 119, 114, 0.2);
   opacity: 1 !important;
 }
@@ -2527,20 +2613,40 @@ footer.footer .section-overlay {
 .blog-details-wrapper .blog-comments .latest-comments .comments-box {
   margin-bottom: 40px;
 }
-.blog-details-wrapper .blog-comments .latest-comments .comments-box .comments-text h5 {
+.blog-details-wrapper
+  .blog-comments
+  .latest-comments
+  .comments-box
+  .comments-text
+  h5 {
   margin-bottom: 4px;
 }
-.blog-details-wrapper .blog-comments .latest-comments .comments-box .comments-text span {
+.blog-details-wrapper
+  .blog-comments
+  .latest-comments
+  .comments-box
+  .comments-text
+  span {
   color: #7b7772;
 }
-.blog-details-wrapper .blog-comments .latest-comments .comments-box .comments-text a {
+.blog-details-wrapper
+  .blog-comments
+  .latest-comments
+  .comments-box
+  .comments-text
+  a {
   position: relative;
   color: var(--mt-brown);
   font-weight: 600;
   text-decoration: none;
   margin-left: 24px;
 }
-.blog-details-wrapper .blog-comments .latest-comments .comments-box .comments-text a::before {
+.blog-details-wrapper
+  .blog-comments
+  .latest-comments
+  .comments-box
+  .comments-text
+  a::before {
   content: "";
   height: 4px;
   width: 4px;
@@ -2550,7 +2656,13 @@ footer.footer .section-overlay {
   left: -14px;
   top: 10px;
 }
-.blog-details-wrapper .blog-comments .latest-comments .comments-box .comments-text a i {
+.blog-details-wrapper
+  .blog-comments
+  .latest-comments
+  .comments-box
+  .comments-text
+  a
+  i {
   font-weight: 500;
 }
 .blog-details-wrapper .blog-comments .latest-comments p {
@@ -2579,3 +2691,15 @@ footer.footer .section-overlay {
 }
 
 /*# sourceMappingURL=style.css.map */
+
+.imp-blk {
+  color: #202020 !important;
+}
+
+.txt-sb {
+  font-weight: 500;
+}
+
+.no-underline {
+  text-decoration: none;
+}
